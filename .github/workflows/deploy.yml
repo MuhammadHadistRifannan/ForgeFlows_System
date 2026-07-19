@@ -33,7 +33,7 @@ jobs:
 
         run: |
 
-          docker login -u ${{secrets.DOCKER_USERNAME}} --pasword-stdin ${{secrets.DOCKER_ACCESS_TOKEN}}
+          docker login -u ${{secrets.DOCKER_USERNAME}} --pasword ${{secrets.DOCKER_ACCESS_TOKEN}}
           docker build \
           -t forge-flows:v1 .
           docker push forge-flows:v1 

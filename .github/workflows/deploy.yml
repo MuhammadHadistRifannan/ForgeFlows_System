@@ -58,7 +58,7 @@ jobs:
         with:
 
 
-          host: ${{ secrets.VPS_HOST }}
+          host: ${{ env.VPS_HOST }}
 
           username: ${{ secrets.VPS_USER }}
 
@@ -71,7 +71,8 @@ jobs:
 
             cd /home/forge-flows
             
-            docker compose pull
+            git pull origin main
+            docker compose build
             docker compose up -d
 
             docker compose exec app php artisan migrate --force

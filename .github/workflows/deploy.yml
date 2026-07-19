@@ -58,7 +58,7 @@ jobs:
         with:
 
 
-          host: ${{ env.VPS_HOST }}
+          host: ${{ secrets.VPS_HOST }}
 
           username: ${{ secrets.VPS_USER }}
 

@@ -3,7 +3,7 @@ services:
   app:
     build: .
 
-    container_name: forge-flows:v1
+    container_name: bennedistus/forge-flows:v1
 
     restart: unless-stopped
 

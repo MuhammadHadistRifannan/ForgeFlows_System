@@ -35,8 +35,8 @@ jobs:
 
           docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_ACCESS_TOKEN}}
           docker build \
-          -t forge-flows:v1 .
-          docker push forge-flows:v1 
+          -t bennedistus/forge-flows:v1 .
+          docker push bennedistus/forge-flows:v1
           
 
 

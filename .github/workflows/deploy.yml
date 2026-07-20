@@ -74,11 +74,10 @@ jobs:
 
             cd /home/project/ForgeFlows
             
-            docker compose down -v
-
-
+            
             git pull origin main
             
+            docker compose down -v
             docker compose pull
             docker compose up -d
 

@@ -3,9 +3,6 @@ services:
   app:
     image: bennedistus/forge-flows:v1
 
-    volumes:
-      - .:/var/www/html
-
     container_name: forge_flows_app
 
     restart: unless-stopped

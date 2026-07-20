@@ -4,7 +4,8 @@ services:
     image: bennedistus/forge-flows:v1
 
     container_name: forge_flows_app
-    volumes: ./:/var/www/html
+    volumes: 
+	  - ./:/var/www/html
 
     restart: unless-stopped
 

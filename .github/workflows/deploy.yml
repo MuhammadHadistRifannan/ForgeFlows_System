@@ -83,7 +83,7 @@ jobs:
 
             sleep 8
 
-            docker compose exec forge_flows_app php artisan migrate --force
-            docker compose exec forge_flows_app php artisan key:generate
+            docker compose exec app php artisan migrate --force
+            docker compose exec app php artisan key:generate
 
-            docker compose exec forge_flows_app php artisan optimize
+            docker compose exec app php artisan optimize

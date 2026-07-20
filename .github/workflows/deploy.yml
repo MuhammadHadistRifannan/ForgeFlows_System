@@ -83,6 +83,8 @@ jobs:
 
             sleep 8
 
+            docker compose exec nginx nginx -t 
+
             docker compose exec app php artisan migrate --force
             docker compose exec app php artisan key:generate
 

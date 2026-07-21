@@ -2,7 +2,7 @@ FROM php:8.2-fpm
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y openssl \
-        libcurl4-openssl-dev \ 
+        libcurl4-openssl-dev \
         libzip-dev \
         libonig-dev \
         libxml2-dev \
@@ -17,11 +17,11 @@ RUN docker-php-ext-install \
     bcmath \
     curl    \
     intl \
-    gd \ 
+    gd \
     json \
     mbstring \
     pdo_mysql \
-    tokenizer \ 
+    tokenizer \
     xml\
     zip 
 

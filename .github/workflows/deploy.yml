@@ -91,13 +91,14 @@ jobs:
             docker compose exec nginx nginx -t 
             docker compose exec app composer install
 
-            docker compose exec app chown -R www-data:www-data storage/framework/views/
-
+            
             if ! grep -q "^APP_KEY=base64:" .env
             then
-              docker compose exec app php artisan key:generate --force
+            docker compose exec app php artisan key:generate --force
             fi
-
+            
             docker compose exec app php artisan migrate --force
-
+            
             docker compose exec app php artisan optimize
+            
+            docker compose exec app chown -R www-data:www-data /var/www/html && chmod -R 777 /var/www/html

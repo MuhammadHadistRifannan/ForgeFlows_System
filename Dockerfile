@@ -17,7 +17,7 @@ RUN docker-php-ext-install \
     gd \ 
     json \
     mbstring \
-    pdo_msyql \
+    pdo_mysql \
     tokenizer \ 
     xml\
     zip 

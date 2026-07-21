@@ -12,14 +12,14 @@ RUN apt-get update && apt-get install -y openssl \
     libzip-dev 
 
 RUN docker-php-ext-install \
-    php-bcmath \
-    php-curl    \ 
-    php-json \
-    php-mbstring \
-    php-mysql \
-    php-tokenizer \ 
-    php-xml\
-    php-zip 
+    bcmath \
+    curl    \ 
+    json \
+    mbstring \
+    mysql \
+    tokenizer \ 
+    xml\
+    zip 
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 

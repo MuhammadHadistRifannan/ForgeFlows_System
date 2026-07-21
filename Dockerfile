@@ -12,10 +12,12 @@ RUN apt-get update && apt-get install -y openssl \
 
 RUN docker-php-ext-install \
     bcmath \
-    curl    \ 
+    curl    \
+    intl \
+    gd \ 
     json \
     mbstring \
-    mysql \
+    pdo_msyql \
     tokenizer \ 
     xml\
     zip 

@@ -18,6 +18,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 COPY . .
 
-RUN chown -R www-data:www-data /app && chmod 777 /app
+RUN chown -R www-data:www-data /var/www/html && chmod 777 /var/www/html
 
 CMD ["php-fpm"]
